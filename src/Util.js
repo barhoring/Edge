@@ -1,3 +1,5 @@
+import data from "./input.json";
+
 const MOVE = "Move";
 const BOMB = "Bomb";
 const MISSES = "Misses";
@@ -24,4 +26,16 @@ const getGrade = (type, value) => {
   return gradding[type](value);
 };
 
-export default { getGrade };
+function Util() {
+  this.rawData = data;
+
+  const processedData = data.map((o) => {
+    const { type, value } = o;
+    o["grade"] = getGrade(type, value);
+    return o;
+  });
+
+  this.processedData = processedData;
+}
+
+export default new Util();

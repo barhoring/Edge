@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
-import input from "./input.json";
+// import input from "./input.json";
+import Util from "./Util";
 import "./App.css";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>{JSON.stringify(input)}</div>
+        <div>{JSON.stringify(Util)}</div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
