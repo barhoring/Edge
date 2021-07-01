@@ -1,1 +1,1 @@
-##[Live Site](https://barhoring.github.io/Edge/)
+[Live Site](https://barhoring.github.io/Edge/)
