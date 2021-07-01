@@ -36,18 +36,24 @@ const Chart = ({ data, title, score }) => {
           height={500}
           data={data}
           margin={{
-            top: 25,
+            top: 30,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 30,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis
             dataKey="time"
-            label={{ value: "Time {Ms}", offset: 0, position: "insideBottom" }}
+            label={{
+              value: "Time {Ms}",
+              offset: 0,
+              position: "bottom",
+            }}
           />
-          <YAxis label={{ value: "Grade", angle: 0, position: "top" }} />
+          <YAxis
+            label={{ offset: 15, value: "Grade", angle: 0, position: "top" }}
+          />
           <Tooltip content={<CustomTooltip />} />
           <Line
             type="monotone"
