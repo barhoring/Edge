@@ -1,26 +1,16 @@
 import logo from "./logo.svg";
-// import input from "./input.json";
+import Chart from "./Chart";
 import Util from "./Util";
 import "./App.css";
 
 function App() {
+  const { speedData, accuracyData } = Util.getProcessedData();
+  const { speedSkillScore, accuracySkillScore } = Util.getSkillScores();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div>{JSON.stringify(Util)}</div>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>{JSON.stringify(Util.getProcessedData())}</div>
+      <Chart data={speedData} title="Speed" score={speedSkillScore} />
+      <Chart data={accuracyData} title="Accuracy" score={accuracySkillScore} />
     </div>
   );
 }
