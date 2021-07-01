@@ -29,8 +29,8 @@ const Chart = ({ data, title, score }) => {
   return (
     <>
       <div className="Chart-container">
-        <h1>{title}</h1>
-        <h3>Skill Score: {fixedScore}</h3>
+        <h2>{title}</h2>
+        <h4>Skill Score: {fixedScore}</h4>
         <LineChart
           width={800}
           height={500}
