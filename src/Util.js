@@ -71,7 +71,6 @@ function Util() {
     [BODY]: [],
   };
 
-  // create
   data.forEach((o) => {
     const { type, value } = o;
     o["grade"] = getGrade(type, value);
@@ -83,7 +82,6 @@ function Util() {
   this._speedSkillScore = getSpeedScore(avgs);
   this._accuracySkillScore = getAccuracyScore(avgs);
 
-  // this._processedData = processedData;
   this._speedData = speedData;
   this._accuracyData = accuracyData;
 
